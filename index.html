@@ -22,8 +22,8 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       background-color: black;
       display: flex;
       justify-content: center;
@@ -32,8 +32,8 @@
     }
 
     #splash video {
-      width: 100%;
-      height: 100%;
+      width: 80%; /* تصغير الفيديو ليظهر بشكل مناسب */
+      max-height: 80%; /* الحد من الحجم العمودي */
       object-fit: cover;
     }
 
@@ -52,7 +52,7 @@
     }
 
     header img {
-      height: 80px;
+      height: 100px;
       margin-bottom: 15px;
     }
 
@@ -83,6 +83,20 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
+    .characters img {
+      height: 150px; /* تصغير حجم الشخصيات */
+      border-radius: 10px;
+      margin: 10px;
+      border: 2px solid #0033A0;
+    }
+
+    .service {
+      margin-bottom: 20px;
+      border: 2px solid #00b894;
+      border-radius: 10px;
+      padding: 15px;
+    }
+
     .social a {
       color: #0033A0;
       margin: 0 15px;
@@ -100,6 +114,13 @@
       text-align: center;
       padding: 20px;
       margin-top: 50px;
+    }
+
+    /* وكالات الشركات */
+    .agency img {
+      height: 80px;
+      margin: 20px;
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -130,14 +151,18 @@
 
   <section id="about">
     <h2>من نحن</h2>
-    <p>شركة رؤيا ليبيا متخصصة في تصميم الشعارات، الطباعة، الإعلانات، والتسويق الرقمي. مقرنا في طريق السكة - طرابلس، بجانب DHL.</p>
+    <p style="font-weight: bold;">شركة رؤيا ليبيا متخصصة في تصميم الشعارات، الطباعة، الإعلانات، والتسويق الرقمي. مقرنا في طريق السكة - طرابلس، بجانب DHL.</p>
+    <p>نقدم حلولاً متكاملة للعلامات التجارية والشركات الراغبة في تحسين صورتها السوقية.</p>
+    <p>نستثمر في أحدث التقنيات لنضمن لك طباعة عالية الجودة وحلول إعلانية مبتكرة.</p>
+    <p>نضع اهتماماتك في قلب عملنا لضمان وصولك إلى جمهورك المستهدف بكفاءة وفعالية.</p>
+    <p>نلتزم بالابتكار والجودة لتلبية احتياجات عملائنا بأعلى مستوى من الاحترافية.</p>
   </section>
 
   <section id="services">
     <h2>خدماتنا</h2>
     <div class="service">
       <h3>تصميم شعارات</h3>
-      <p>نقدم خدمات تصميم احترافي لهوية شركتك.</p>
+      <p>نقدم خدمات تصميم احترافي لهوية شركتك، من الشعارات إلى الهوية البصرية الكاملة.</p>
     </div>
     <div class="service">
       <h3>طباعة داخلية وإعلانات خارجية</h3>
@@ -178,6 +203,24 @@
     </div>
   </section>
 
+  <section id="agencies">
+    <h2>الشركات التي نعمل مع وكالاتها</h2>
+    <div class="agency">
+      <a href="https://cosign.be/" target="_blank">
+        <img src="cosin.jpg" alt="Cosin">
+        <p>Cosin - شركة بلجيكية للعلامات الإرشادية والتوجيه الداخلية والخارجية.</p>
+      </a>
+      <a href="https://www.rolanddga.com/" target="_blank">
+        <img src="roland.jpg" alt="Roland">
+        <p>Roland - شركة يابانية لتصنيع آلات الطباعة بخاصية print & cut.</p>
+      </a>
+      <a href="https://www.mactac.com/" target="_blank">
+        <img src="mactac.jpg" alt="Mactac">
+        <p>Mactac - شركة أمريكية لتصنيع مواد الطباعة الخام.</p>
+      </a>
+    </div>
+  </section>
+
   <footer>
     <img src="55555555555555.png" alt="شعار أسفل الموقع" style="height: 50px;">
     <br>&copy; 2025 رؤيا ليبيا - جميع الحقوق محفوظة.
@@ -194,7 +237,6 @@
     mainContent.style.display = 'block';
   });
 
-  // في حال لم يعمل الفيديو بشكل صحيح
   setTimeout(() => {
     splash.style.display = 'none';
     mainContent.style.display = 'block';
