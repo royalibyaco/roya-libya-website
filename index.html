@@ -2,12 +2,14 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>رؤيا ليبيا للدعاية والخدمات الإعلانية</title>
   <style>
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
       background-color: #f4f4f4;
+      color: #333;
     }
     header {
       background-color: #25D366;
@@ -44,18 +46,59 @@
     }
     h2 {
       color: #25D366;
+      margin-bottom: 20px;
     }
+    /* حركة ظهور */
+    @keyframes fadeInCharacter {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* حركة دوران */
+    @keyframes rotateCharacter {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* حركة اهتزاز */
+    @keyframes shakeCharacter {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      50% { transform: translateX(10px); }
+      75% { transform: translateX(-10px); }
+      100% { transform: translateX(0); }
+    }
+
     .characters img {
       height: 150px;
       border-radius: 10px;
       margin: 10px;
       border: 2px solid #0033A0;
+      animation: fadeInCharacter 2s ease-in-out, rotateCharacter 6s infinite linear;
+      transition: transform 0.3s ease;
     }
+
+    .characters img:hover {
+      animation: shakeCharacter 0.5s ease;
+    }
+
     .service {
       margin-bottom: 20px;
       border: 2px solid #25D366;
       border-radius: 10px;
       padding: 15px;
+    }
+    .service h3 {
+      color: #0033A0;
+      margin-bottom: 10px;
     }
     .social a {
       color: #0033A0;
@@ -72,6 +115,10 @@
       text-align: center;
       padding: 20px;
       margin-top: 50px;
+    }
+    footer img {
+      height: 50px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -141,8 +188,8 @@
   </section>
 
   <footer>
-    <img src="55555555555555.png" alt="شعار أسفل الموقع" style="height: 50px;"><br>
-    &copy; 2025 رؤيا ليبيا - جميع الحقوق محفوظة.
+    <img src="55555555555555.png" alt="شعار أسفل الموقع">
+    <p>&copy; 2025 رؤيا ليبيا - جميع الحقوق محفوظة.</p>
   </footer>
 
 </body>
