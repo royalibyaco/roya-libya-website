@@ -2,353 +2,170 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>رؤيا ليبيا للدعاية والإعلانات</title>
+  <title>رؤيا ليبيا للدعاية والخدمات الإعلانية</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f4;
-    }
-
-    #splash {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: black;
-      z-index: 9999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    #splash video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    #main-content {
-      display: none;
-    }
-
-    header {
-      background-color: #00b894;
-      text-align: center;
-      color: white;
-      padding: 40px 20px;
-    }
-
-    header img {
-      height: 100px;
-      margin-bottom: 10px;
-    }
-
-    nav {
-      background-color: #0033A0;
-      padding: 15px;
-      text-align: center;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Arial', sans-serif; background-color: #f8f8f8; color: #333; }
+    header, footer, section, nav { padding: 20px; margin: auto; max-width: 1000px; }
+    header img { height: 80px; }
     nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
+      margin: 0 15px; color: #fff; text-decoration: none;
+      padding: 10px 15px; background-color: #003366; border-radius: 5px;
     }
-
-    section {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    nav a:hover { background-color: #005599; }
+    h2 { color: #003366; margin-top: 20px; }
+    .service-box {
+      border: 2px solid #25D366; padding: 20px; border-radius: 15px;
+      background-color: #fff; margin-bottom: 20px;
     }
-
-    section h2 {
-      color: #0033A0;
-      margin-bottom: 15px;
+    .service-box img {
+      width: 100%; border-radius: 10px; border: 3px solid #25D366;
+      margin-top: 10px;
     }
-
-    .agency {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+    .partners img {
+      height: 80px; margin: 10px; border: 2px solid #ccc; border-radius: 10px;
     }
-
-    .agency a {
-      text-align: center;
-      text-decoration: none;
-      color: #333;
+    .partners p { font-size: 14px; margin-top: 5px; color: #555; }
+    footer { background-color: #25D366; color: white; text-align: center; border-radius: 10px; }
+    .whatsapp {
+      display: inline-block; margin: 20px auto; text-align: center;
+      padding: 10px 20px; background: #25D366; color: white; border-radius: 8px;
+      text-decoration: none; font-weight: bold;
     }
-
-    .agency img {
-      height: 80px;
-      border-radius: 8px;
+    .map-link {
+      display: block; margin: 20px auto; color: #003366; font-weight: bold;
+      text-align: center; text-decoration: none;
     }
-
-    .agency img.roland {
-      height: 60px;
+    #intro-screen {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: black; z-index: 9999;
     }
-
-    footer {
-      background-color: #00b894;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .social a {
-      margin: 0 10px;
-      color: #0033A0;
-      text-decoration: none;
-    }
-
-    .social a:hover {
-      text-decoration: underline;
+    #intro-screen video {
+      width: 100%; height: 100%; object-fit: cover;
     }
   </style>
 </head>
 <body>
 
 <!-- شاشة الانترو -->
-<div id="splash">
-  <video id="introVideo" autoplay muted playsinline>
+<div id="intro-screen">
+  <video autoplay muted playsinline id="intro-video">
     <source src="introo.mp4" type="video/mp4">
     متصفحك لا يدعم تشغيل الفيديو.
   </video>
 </div>
 
-<!-- محتوى الموقع -->
-<div id="main-content">
-  <header>
-    <img src="55555555555555.png" alt="شعار الشركة">
-    <h1>رؤيا ليبيا للدعاية والخدمات الإعلانية</h1>
-    <p>تأسست عام 1999</p>
-  </header>
-
-  <nav>
-    <a href="#about">من نحن</a>
-    <a href="#services">خدماتنا</a>
-    <a href="#agencies">وكالات الشركات</a>
-    <a href="#contact">تواصل معنا</a>
-  </nav>
-
-  <section id="about">
-    <h2>من نحن</h2>
-    <p style="font-weight:bold;">رؤيا ليبيا شركة رائدة في مجال الدعاية والإعلان، تأسست عام 1999 ومقرها في طريق السكة – طرابلس، بجانب DHL.</p>
-    <p>نحن متخصصون في تقديم حلول متكاملة تشمل الطباعة، تصميم الشعارات، العلامات الإرشادية، والإعلانات الخارجية والرقمية.</p>
-    <p>نلتزم باستخدام أحدث التقنيات لنضمن جودة عالية ونتائج مبهرة لعملائنا.</p>
-    <p>نتميز بخدمة العملاء، السرعة في التنفيذ، والدقة في التفاصيل.</p>
-    <p>ثقة عملائنا هي سر استمرارنا ونجاحنا.</p>
-  </section>
-
-  <section id="services">
-    <h2>خدماتنا</h2>
-    <ul>
-      <li>تصميم شعارات وهوية بصرية كاملة</li>
-      <li>الطباعة الداخلية والإعلانات الخارجية</li>
-      <li>طباعة لافتات، بنرات، ستاندات رول أب وستاندات X</li>
-      <li>إدارة المحتوى الرقمي ووسائل التواصل الاجتماعي</li>
-      <li>تركيب العلامات التوجيهية واللوحات التجارية</li>
-    </ul>
-  </section>
-
-  <section id="agencies">
-    <h2>الشركات التي نمثلها</h2>
-    <div class="agency">
-      <a href="https://cosign.be/" target="_blank">
-        <img src="cosin.jpg" alt="Cosign">
-        <p>Cosign - شركة بلجيكية للعلامات الإرشادية والتوجيه الداخلية والخارجية</p>
-      </a>
-      <a href="https://www.rolanddga.com/" target="_blank">
-        <img src="roland.jpg" alt="Roland" class="roland">
-        <p>Roland - شركة يابانية لتصنيع آلات الطباعة بخاصية Print & Cut</p>
-      </a>
-      <a href="https://www.mactac.com/" target="_blank">
-        <img src="mactac.jpg" alt="Mactac">
-        <p>Mactac - شركة أمريكية لمواد الطباعة الخام</p>
-      </a>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>تواصل معنا</h2>
-    <p>الهاتف والواتساب: <strong>0914645601</strong></p>
-    <p>البريد الإلكتروني: <a href="mailto:info@royagraphics.ly">info@royagraphics.ly</a></p>
-    <div class="social">
-      <a href="https://www.instagram.com/roya_graphics?igsh=YWRoMDhmZG8zcnAw" target="_blank">إنستغرام</a>
-      <a href="https://www.facebook.com/share/17zC4EsC7Q/?mibextid=wwXIfr" target="_blank">فيسبوك</a>
-      <a href="https://www.royagraphics.ly/" target="_blank">الموقع الرسمي</a>
-    </div>
-    <br>
-    <a href="https://wa.me/218914645601" target="_blank" style="background:#25D366;color:white;padding:10px 20px;border-radius:5px;text-decoration:none;">راسلنا عبر واتساب</a>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 رؤيا ليبيا - جميع الحقوق محفوظة.</p>
-  </footer>
-</div>
-
 <script>
-  const video = document.getElementById('introVideo');
-  const splash = document.getElementById('splash');
-  const main = document.getElementById('main-content');
-
-  video.addEventListener('ended', () => {
-    splash.style.display = 'none';
-    main.style.display = 'block';
-  });
-
-  setTimeout(() => {
-    splash.style.display = 'none';
-    main.style.display = 'block';
-  }, 15000); // احتياطيًا بعد 15 ثانية
+  const intro = document.getElementById("intro-screen");
+  const video = document.getElementById("intro-video");
+  video.onended = () => { intro.style.display = "none"; };
 </script>
 
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>رؤيا ليبيا - لعبة الرسام</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f4;
-      text-align: center;
-    }
-
-    header {
-      background-color: #0033A0;
-      padding: 20px;
-    }
-
-    header img {
-      height: 80px;
-    }
-
-    h1 {
-      color: #0033A0;
-      margin: 20px 0 10px;
-    }
-
-    .tools {
-      margin: 15px auto;
-      direction: ltr;
-      text-align: center;
-    }
-
-    .tools input[type="color"],
-    .tools input[type="range"],
-    .tools button {
-      margin: 0 10px;
-      padding: 6px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    canvas {
-      border: 2px solid #25D366;
-      background-color: #fff;
-      border-radius: 8px;
-      touch-action: none;
-    }
-
-    #offline-msg {
-      display: none;
-      padding: 20px;
-      background: #ffdddd;
-      color: #900;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-
+<!-- المحتوى الرئيسي -->
 <header>
-  <img src="logo.png" alt="شعار شركة رؤيا ليبيا">
+  <img src="55555555555555.png" alt="شعار الشركة">
+  <h1>رؤيا ليبيا للدعاية والخدمات الإعلانية</h1>
+  <p><strong>تأسست عام 1999، طريق السكة بجانب DHL</strong></p>
 </header>
 
-<h1>لعبة الرسام</h1>
-<p id="offline-msg">أنت غير متصل بالإنترنت، ولكن لا تقلق، لا تزال تستطيع الرسم!</p>
+<nav>
+  <a href="#about">من نحن</a>
+  <a href="#services">الخدمات</a>
+  <a href="#partners">شركات نمثلها</a>
+  <a href="#contact">تواصل</a>
+</nav>
 
-<div class="tools">
-  <label>اللون: <input type="color" id="colorPicker" value="#0033A0"></label>
-  <label>السُمك: <input type="range" id="brushSize" min="1" max="20" value="5"></label>
-  <button onclick="clearCanvas()">مسح</button>
-</div>
+<section id="about">
+  <h2>من نحن</h2>
+  <p style="font-weight: bold;">
+    شركة رؤيا ليبيا للدعاية والخدمات الإعلانية، تأسست عام 1999 وتعمل في مجال الإعلانات والطباعات وتصميم الهوية البصرية.
+  </p>
+  <ul>
+    <li>نحن نُبدع في تقديم حلول دعائية متكاملة تناسب كل عميل.</li>
+    <li>خبرة واسعة في السوق الليبي لأكثر من 20 سنة.</li>
+    <li>وكالات حصرية لأشهر الشركات العالمية في مجال الطباعة والإعلان.</li>
+    <li>نقدم خدماتنا بجودة عالية وبأسعار منافسة.</li>
+  </ul>
+</section>
 
-<canvas id="canvas" width="350" height="500"></canvas>
+<section id="services">
+  <h2>خدماتنا</h2>
 
-<script>
-  const canvas = document.getElementById('canvas');
-  const ctx = canvas.getContext('2d');
-  const colorPicker = document.getElementById('colorPicker');
-  const brushSize = document.getElementById('brushSize');
-  let painting = false;
+  <div class="service-box">
+    <h3>تصميم شعارات</h3>
+    <p>تصميم احترافي لهوية شركتك أو مؤسستك مع مراعاة الأبعاد الفنية.</p>
+    <img src="55555555555555.png" alt="شعار">
+  </div>
 
-  function startPosition(e) {
-    painting = true;
-    draw(e);
-  }
+  <div class="service-box">
+    <h3>الطباعة الداخلية والإعلانات الخارجية (LED)</h3>
+    <p>ننفذ لوحات دعائية بإضاءة LED، مع بنرات وستاندات رول أب وستاندات X.</p>
+    <img src="LEDداخلي وخارجي.jpg">
+    <img src="LEDداخلي وخارجي1.jpg">
+    <img src="LEDداخلي وخارجي2.jpg">
+    <img src="LEDداخلي وخارجي3.jpg">
+  </div>
 
-  function endPosition() {
-    painting = false;
-    ctx.beginPath();
-  }
+  <div class="service-box">
+    <h3>هدايا دعائية</h3>
+    <p>نقدم مجموعة متنوعة من الهدايا الترويجية المخصصة لعلامتك التجارية.</p>
+    <img src="هداية.jpg">
+    <img src="هداية1.jpg">
+    <img src="هداية2.jpg">
+    <img src="هداية3.jpg">
+    <img src="هداية4.jpg">
+    <img src="هداية5.jpg">
+    <img src="هداية6.jpg">
+  </div>
 
-  function draw(e) {
-    if (!painting) return;
-    e.preventDefault();
+  <div class="service-box">
+    <h3>الطباعة على الملابس</h3>
+    <p>error</p>
+    <img src="55555555555555.png" alt="شعار">
+  </div>
 
-    const rect = canvas.getBoundingClientRect();
-    const x = (e.clientX || e.touches[0].clientX) - rect.left;
-    const y = (e.clientY || e.touches[0].clientY) - rect.top;
+  <div class="service-box">
+    <h3>تصميم الإعلانات الطرقية</h3>
+    <p>error</p>
+    <img src="55555555555555.png" alt="شعار">
+  </div>
+</section>
 
-    ctx.lineWidth = brushSize.value;
-    ctx.lineCap = 'round';
-    ctx.strokeStyle = colorPicker.value;
+<section id="partners">
+  <h2>شركات نمثلها</h2>
+  <div class="partners" style="text-align:center;">
+    <div>
+      <a href="https://cosign.be/" target="_blank">
+        <img src="cosin.jpg" alt="Cosign">
+      </a>
+      <p>Cosign شركة بلجيكية للعلامات الإرشادية والتوجيه الداخلي والخارجي</p>
+    </div>
+    <div>
+      <a href="https://www.rolanddga.com/" target="_blank">
+        <img src="roland.jpg" alt="Roland" style="height:60px;">
+      </a>
+      <p>Roland شركة يابانية لآلات الطباعة بتقنية Print & Cut</p>
+    </div>
+    <div>
+      <a href="https://www.mactac.com/" target="_blank">
+        <img src="mactac.jpg" alt="Mactac">
+      </a>
+      <p>Mactac شركة أمريكية لتصنيع مواد الطباعة الخام</p>
+    </div>
+  </div>
+</section>
 
-    ctx.lineTo(x, y);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-  }
+<section id="contact">
+  <h2>تواصل معنا</h2>
+  <p>رقم الهاتف والواتساب: <strong>0914645601</strong></p>
+  <p>البريد الإلكتروني: <a href="mailto:info@royagraphics.ly">info@royagraphics.ly</a></p>
+  <a class="whatsapp" href="https://wa.me/218914645601" target="_blank">راسلنا على واتساب</a>
+  <a class="map-link" href="https://maps.app.goo.gl/bpu8QkV7MgdNof9p9?g_st=com.google.maps.preview.copy" target="_blank">موقعنا على الخريطة</a>
+</section>
 
-  function clearCanvas() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-  }
-
-  canvas.addEventListener('mousedown', startPosition);
-  canvas.addEventListener('mouseup', endPosition);
-  canvas.addEventListener('mousemove', draw);
-  canvas.addEventListener('touchstart', startPosition);
-  canvas.addEventListener('touchend', endPosition);
-  canvas.addEventListener('touchmove', draw);
-
-  // Show offline message if not online
-  if (!navigator.onLine) {
-    document.getElementById('offline-msg').style.display = 'block';
-  }
-
-  window.addEventListener('offline', () => {
-    document.getElementById('offline-msg').style.display = 'block';
-  });
-</script>
+<footer>
+  &copy; 2025 رؤيا ليبيا - جميع الحقوق محفوظة.
+</footer>
 
 </body>
 </html>
