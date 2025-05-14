@@ -218,3 +218,137 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>رؤيا ليبيا - لعبة الرسام</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    header {
+      background-color: #0033A0;
+      padding: 20px;
+    }
+
+    header img {
+      height: 80px;
+    }
+
+    h1 {
+      color: #0033A0;
+      margin: 20px 0 10px;
+    }
+
+    .tools {
+      margin: 15px auto;
+      direction: ltr;
+      text-align: center;
+    }
+
+    .tools input[type="color"],
+    .tools input[type="range"],
+    .tools button {
+      margin: 0 10px;
+      padding: 6px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    canvas {
+      border: 2px solid #25D366;
+      background-color: #fff;
+      border-radius: 8px;
+      touch-action: none;
+    }
+
+    #offline-msg {
+      display: none;
+      padding: 20px;
+      background: #ffdddd;
+      color: #900;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="شعار شركة رؤيا ليبيا">
+</header>
+
+<h1>لعبة الرسام</h1>
+<p id="offline-msg">أنت غير متصل بالإنترنت، ولكن لا تقلق، لا تزال تستطيع الرسم!</p>
+
+<div class="tools">
+  <label>اللون: <input type="color" id="colorPicker" value="#0033A0"></label>
+  <label>السُمك: <input type="range" id="brushSize" min="1" max="20" value="5"></label>
+  <button onclick="clearCanvas()">مسح</button>
+</div>
+
+<canvas id="canvas" width="350" height="500"></canvas>
+
+<script>
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  const colorPicker = document.getElementById('colorPicker');
+  const brushSize = document.getElementById('brushSize');
+  let painting = false;
+
+  function startPosition(e) {
+    painting = true;
+    draw(e);
+  }
+
+  function endPosition() {
+    painting = false;
+    ctx.beginPath();
+  }
+
+  function draw(e) {
+    if (!painting) return;
+    e.preventDefault();
+
+    const rect = canvas.getBoundingClientRect();
+    const x = (e.clientX || e.touches[0].clientX) - rect.left;
+    const y = (e.clientY || e.touches[0].clientY) - rect.top;
+
+    ctx.lineWidth = brushSize.value;
+    ctx.lineCap = 'round';
+    ctx.strokeStyle = colorPicker.value;
+
+    ctx.lineTo(x, y);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+  }
+
+  function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+
+  canvas.addEventListener('mousedown', startPosition);
+  canvas.addEventListener('mouseup', endPosition);
+  canvas.addEventListener('mousemove', draw);
+  canvas.addEventListener('touchstart', startPosition);
+  canvas.addEventListener('touchend', endPosition);
+  canvas.addEventListener('touchmove', draw);
+
+  // Show offline message if not online
+  if (!navigator.onLine) {
+    document.getElementById('offline-msg').style.display = 'block';
+  }
+
+  window.addEventListener('offline', () => {
+    document.getElementById('offline-msg').style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
