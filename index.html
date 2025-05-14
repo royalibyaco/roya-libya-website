@@ -8,117 +8,114 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-color: #f4f4f4;
+      background-color: #f9f9f9;
       color: #333;
+      line-height: 1.6;
     }
+
     header {
       background-color: #25D366;
       color: white;
       text-align: center;
-      padding: 30px;
+      padding: 40px 20px;
     }
+
     header img {
       height: 80px;
       margin-bottom: 10px;
     }
+
     nav {
       background-color: #0033A0;
       text-align: center;
-      padding: 15px;
+      padding: 15px 0;
     }
+
     nav a {
       color: white;
-      margin: 0 20px;
+      margin: 0 25px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
     section {
       background: white;
-      margin: 30px auto;
-      padding: 25px;
+      margin: 40px auto;
+      padding: 30px;
       width: 90%;
-      max-width: 1000px;
+      max-width: 1100px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     }
+
     h2 {
       color: #25D366;
       margin-bottom: 20px;
     }
-    /* حركة ظهور */
-    @keyframes fadeInCharacter {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
+
+    .characters, .partners {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
     }
 
-    /* حركة دوران */
-    @keyframes rotateCharacter {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* حركة اهتزاز */
-    @keyframes shakeCharacter {
-      0% { transform: translateX(0); }
-      25% { transform: translateX(-10px); }
-      50% { transform: translateX(10px); }
-      75% { transform: translateX(-10px); }
-      100% { transform: translateX(0); }
-    }
-
-    .characters img {
+    .characters img, .partners img {
       height: 150px;
       border-radius: 10px;
-      margin: 10px;
       border: 2px solid #0033A0;
-      animation: fadeInCharacter 2s ease-in-out, rotateCharacter 6s infinite linear;
-      transition: transform 0.3s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
     }
 
-    .characters img:hover {
-      animation: shakeCharacter 0.5s ease;
+    .characters img:hover, .partners img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
 
     .service {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       border: 2px solid #25D366;
       border-radius: 10px;
-      padding: 15px;
+      padding: 20px;
     }
+
     .service h3 {
       color: #0033A0;
       margin-bottom: 10px;
     }
+
     .social a {
       color: #0033A0;
       margin: 0 15px;
       font-weight: bold;
       text-decoration: none;
     }
+
     .social a:hover {
       text-decoration: underline;
     }
+
     footer {
       background-color: #25D366;
       color: white;
       text-align: center;
-      padding: 20px;
-      margin-top: 50px;
+      padding: 25px 15px;
+      margin-top: 60px;
     }
+
     footer img {
       height: 50px;
       margin-bottom: 10px;
+    }
+
+    .text-center {
+      text-align: center;
     }
   </style>
 </head>
@@ -127,52 +124,69 @@
   <header>
     <img src="55555555555555.png" alt="شعار الشركة">
     <h1>رؤيا ليبيا للدعاية والخدمات الإعلانية</h1>
-    <p>تأسست عام 1999</p>
+    <p>تأسست عام 1999 - مقرنا: طريق السكة، بجانب DHL - طرابلس</p>
   </header>
 
   <nav>
     <a href="#about">من نحن</a>
     <a href="#services">الخدمات</a>
     <a href="#characters">شخصياتنا</a>
+    <a href="#partners">وكلاؤنا</a>
     <a href="#contact">تواصل معنا</a>
   </nav>
 
   <section id="about">
     <h2>من نحن</h2>
-    <p>شركة رؤيا ليبيا متخصصة في تصميم الشعارات، الطباعة، الإعلانات، والتسويق الرقمي. مقرنا في طريق السكة - طرابلس، بجانب DHL.</p>
+    <p>شركة رؤيا ليبيا متخصصة في تقديم خدمات التصميم، الطباعة، الإعلانات، وإدارة المحتوى الرقمي. نحن نساعد المؤسسات والعلامات التجارية على الظهور بشكل احترافي وجذّاب عبر وسائل الإعلام التقليدية والرقمية.</p>
   </section>
 
   <section id="services">
     <h2>خدماتنا</h2>
     <div class="service">
-      <h3>تصميم شعارات</h3>
-      <p>نقدم خدمات تصميم احترافي لهوية شركتك.</p>
+      <h3>تصميم شعارات وهوية بصرية</h3>
+      <p>ابتكار هويات متكاملة تواكب رؤية وطموح عملائك.</p>
     </div>
     <div class="service">
-      <h3>طباعة وإعلانات</h3>
-      <p>بنرات، فلكسات، لوحات LED بجودة عالية.</p>
+      <h3>طباعة وإعلانات خارجية</h3>
+      <p>بنرات، فلكسات، لوحات LED وإعلانات طرق بأفضل جودة.</p>
     </div>
     <div class="service">
       <h3>إدارة المحتوى والسوشيال ميديا</h3>
-      <p>إعداد وتخطيط منشوراتك على جميع المنصات.</p>
+      <p>نقدم تخطيط، تصميم، وجدولة احترافية لكافة حساباتك.</p>
     </div>
   </section>
 
   <section id="characters">
-    <h2>شخصياتنا</h2>
-    <div class="characters" style="text-align:center;">
+    <h2>شخصياتنا الكرتونية</h2>
+    <div class="characters">
       <div>
         <img src="Roya.jpg" alt="Roya">
-        <p>Roya - الشخصية الأساسية</p>
+        <p class="text-center">Roya - الشخصية الأساسية</p>
       </div>
       <div>
         <img src="Ruyana.jpg" alt="Ruyana">
-        <p>Ruyana - شخصية مساعدة</p>
+        <p class="text-center">Ruyana - شخصية مساعدة</p>
       </div>
       <div>
         <img src="Ruyto.jpg" alt="Ruyto">
-        <p>Ruyto - شخصية مساعدة</p>
+        <p class="text-center">Ruyto - شخصية مساعدة</p>
       </div>
+    </div>
+  </section>
+
+  <section id="partners">
+    <h2>الشركات التي نمثلها</h2>
+    <p class="text-center">رؤيا ليبيا هي الوكيل الرسمي في ليبيا لعدد من الشركات العالمية الرائدة:</p>
+    <div class="partners">
+      <a href="https://cosign.be/" target="_blank">
+        <img src="cosin.jpg" alt="Cosign - بلجيكا">
+      </a>
+      <a href="https://www.rolanddga.com/" target="_blank">
+        <img src="roland.jpg" alt="Roland - اليابان">
+      </a>
+      <a href="https://www.mactac.com/" target="_blank">
+        <img src="mactac.jpg" alt="Mactac - أمريكا">
+      </a>
     </div>
   </section>
 
@@ -180,7 +194,7 @@
     <h2>تواصل معنا</h2>
     <p>الهاتف والواتساب: <strong>0914645601</strong></p>
     <p>البريد الإلكتروني: <a href="mailto:info@royagraphics.ly">info@royagraphics.ly</a></p>
-    <div class="social">
+    <div class="social text-center">
       <a href="https://www.instagram.com/roya_graphics?igsh=YWRoMDhmZG8zcnAw" target="_blank">إنستغرام</a>
       <a href="https://www.facebook.com/share/17zC4EsC7Q/?mibextid=wwXIfr" target="_blank">فيسبوك</a>
       <a href="https://www.royagraphics.ly/" target="_blank">الموقع الرسمي</a>
@@ -188,7 +202,7 @@
   </section>
 
   <footer>
-    <img src="55555555555555.png" alt="شعار أسفل الموقع">
+    <img src="55555555555555.png" alt="شعار الشركة">
     <p>&copy; 2025 رؤيا ليبيا - جميع الحقوق محفوظة.</p>
   </footer>
 
