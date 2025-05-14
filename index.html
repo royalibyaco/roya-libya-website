@@ -13,92 +13,92 @@
 
     html, body {
       height: 100%;
-      font-family: Arial, sans-serif;
-      scroll-behavior: smooth;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
     }
 
-    /* شاشة البداية (الفيديو) */
     #splash {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: black;
+      background: black;
+      z-index: 9999;
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 9999;
     }
 
     #splash video {
-      width: 100%; /* التأكد من ملء الشاشة تمامًا */
-      height: 100%; /* ملء الشاشة بالكامل */
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
 
-    /* محتوى الموقع */
     #main-content {
       display: none;
-      background-color: #f4f4f4;
-      padding: 20px;
     }
 
     header {
       background-color: #00b894;
-      color: white;
       text-align: center;
-      padding: 30px;
+      color: white;
+      padding: 40px 20px;
     }
 
     header img {
-      height: 120px;
-      margin-bottom: 20px;
+      height: 100px;
+      margin-bottom: 10px;
     }
 
     nav {
       background-color: #0033A0;
-      text-align: center;
       padding: 15px;
+      text-align: center;
     }
 
     nav a {
       color: white;
-      margin: 0 20px;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
     section {
-      background: white;
-      margin: 30px auto;
-      padding: 25px;
-      width: 90%;
       max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    .service {
-      margin-bottom: 20px;
-      border: 2px solid #00b894;
-      border-radius: 10px;
-      padding: 15px;
-    }
-
-    .social a {
+    section h2 {
       color: #0033A0;
-      margin: 0 15px;
-      font-weight: bold;
-      text-decoration: none;
+      margin-bottom: 15px;
     }
 
-    .social a:hover {
-      text-decoration: underline;
+    .agency {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .agency a {
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .agency img {
+      height: 80px;
+      border-radius: 8px;
+    }
+
+    .agency img.roland {
+      height: 60px;
     }
 
     footer {
@@ -106,23 +106,25 @@
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 50px;
     }
 
-    /* وكالات الشركات */
-    .agency img {
-      height: 100px;
-      margin: 20px;
-      border-radius: 10px;
+    .social a {
+      margin: 0 10px;
+      color: #0033A0;
+      text-decoration: none;
+    }
+
+    .social a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-<!-- شاشة الفيديو (intro) -->
+<!-- شاشة الانترو -->
 <div id="splash">
   <video id="introVideo" autoplay muted playsinline>
-    <source src="intro.mp4" type="video/mp4">
+    <source src="introo.mp4" type="video/mp4">
     متصفحك لا يدعم تشغيل الفيديو.
   </video>
 </div>
@@ -137,50 +139,45 @@
 
   <nav>
     <a href="#about">من نحن</a>
-    <a href="#services">الخدمات</a>
+    <a href="#services">خدماتنا</a>
     <a href="#agencies">وكالات الشركات</a>
     <a href="#contact">تواصل معنا</a>
   </nav>
 
   <section id="about">
     <h2>من نحن</h2>
-    <p style="font-weight: bold;">شركة رؤيا ليبيا متخصصة في تصميم الشعارات، الطباعة، الإعلانات، والتسويق الرقمي. مقرنا في طريق السكة - طرابلس، بجانب DHL.</p>
-    <p>نقدم حلولًا متكاملة للعلامات التجارية والشركات الراغبة في تحسين صورتها السوقية.</p>
-    <p>نستثمر في أحدث التقنيات لنضمن لك طباعة عالية الجودة وحلول إعلانية مبتكرة.</p>
-    <p>نضع اهتماماتك في قلب عملنا لضمان وصولك إلى جمهورك المستهدف بكفاءة وفعالية.</p>
-    <p>نلتزم بالابتكار والجودة لتلبية احتياجات عملائنا بأعلى مستوى من الاحترافية.</p>
+    <p style="font-weight:bold;">رؤيا ليبيا شركة رائدة في مجال الدعاية والإعلان، تأسست عام 1999 ومقرها في طريق السكة – طرابلس، بجانب DHL.</p>
+    <p>نحن متخصصون في تقديم حلول متكاملة تشمل الطباعة، تصميم الشعارات، العلامات الإرشادية، والإعلانات الخارجية والرقمية.</p>
+    <p>نلتزم باستخدام أحدث التقنيات لنضمن جودة عالية ونتائج مبهرة لعملائنا.</p>
+    <p>نتميز بخدمة العملاء، السرعة في التنفيذ، والدقة في التفاصيل.</p>
+    <p>ثقة عملائنا هي سر استمرارنا ونجاحنا.</p>
   </section>
 
   <section id="services">
     <h2>خدماتنا</h2>
-    <div class="service">
-      <h3>تصميم شعارات</h3>
-      <p>نقدم خدمات تصميم احترافي لهوية شركتك، من الشعارات إلى الهوية البصرية الكاملة.</p>
-    </div>
-    <div class="service">
-      <h3>طباعة داخلية وإعلانات خارجية</h3>
-      <p>نحن نقدم خدمات طباعة لافتات، بنرات، ستاندات رول أب و X، بالإضافة إلى إعلانات خارجية لمنتجاتك.</p>
-    </div>
-    <div class="service">
-      <h3>إدارة المحتوى والسوشيال ميديا</h3>
-      <p>إعداد وتخطيط منشوراتك على جميع المنصات الرقمية، لزيادة تفاعل جمهورك.</p>
-    </div>
+    <ul>
+      <li>تصميم شعارات وهوية بصرية كاملة</li>
+      <li>الطباعة الداخلية والإعلانات الخارجية</li>
+      <li>طباعة لافتات، بنرات، ستاندات رول أب وستاندات X</li>
+      <li>إدارة المحتوى الرقمي ووسائل التواصل الاجتماعي</li>
+      <li>تركيب العلامات التوجيهية واللوحات التجارية</li>
+    </ul>
   </section>
 
   <section id="agencies">
-    <h2>وكالات الشركات</h2>
+    <h2>الشركات التي نمثلها</h2>
     <div class="agency">
       <a href="https://cosign.be/" target="_blank">
-        <img src="cosin.jpg" alt="Cosin">
-        <p>Cosin - شركة بلجيكية متخصصة في العلامات الإرشادية والتوجيه الخارجية والداخلية.</p>
+        <img src="cosin.jpg" alt="Cosign">
+        <p>Cosign - شركة بلجيكية للعلامات الإرشادية والتوجيه الداخلية والخارجية</p>
       </a>
       <a href="https://www.rolanddga.com/" target="_blank">
-        <img src="roland.jpg" alt="Roland">
-        <p>Roland - شركة يابانية لتصنيع آلات الطباعة بخاصية Print & Cut.</p>
+        <img src="roland.jpg" alt="Roland" class="roland">
+        <p>Roland - شركة يابانية لتصنيع آلات الطباعة بخاصية Print & Cut</p>
       </a>
       <a href="https://www.mactac.com/" target="_blank">
         <img src="mactac.jpg" alt="Mactac">
-        <p>Mactac - شركة أمريكية لتصنيع مواد الطباعة الخام.</p>
+        <p>Mactac - شركة أمريكية لمواد الطباعة الخام</p>
       </a>
     </div>
   </section>
@@ -194,28 +191,29 @@
       <a href="https://www.facebook.com/share/17zC4EsC7Q/?mibextid=wwXIfr" target="_blank">فيسبوك</a>
       <a href="https://www.royagraphics.ly/" target="_blank">الموقع الرسمي</a>
     </div>
+    <br>
+    <a href="https://wa.me/218914645601" target="_blank" style="background:#25D366;color:white;padding:10px 20px;border-radius:5px;text-decoration:none;">راسلنا عبر واتساب</a>
   </section>
 
   <footer>
-    <img src="55555555555555.png" alt="شعار أسفل الموقع" style="height: 50px;">
-    <br>&copy; 2025 رؤيا ليبيا - جميع الحقوق محفوظة.
+    <p>&copy; 2025 رؤيا ليبيا - جميع الحقوق محفوظة.</p>
   </footer>
 </div>
 
 <script>
   const video = document.getElementById('introVideo');
   const splash = document.getElementById('splash');
-  const mainContent = document.getElementById('main-content');
+  const main = document.getElementById('main-content');
 
   video.addEventListener('ended', () => {
     splash.style.display = 'none';
-    mainContent.style.display = 'block';
+    main.style.display = 'block';
   });
 
   setTimeout(() => {
     splash.style.display = 'none';
-    mainContent.style.display = 'block';
-  }, 15000); // 15 ثانية كحد أقصى في حال تعطّل الفيديو
+    main.style.display = 'block';
+  }, 15000); // احتياطيًا بعد 15 ثانية
 </script>
 
 </body>
