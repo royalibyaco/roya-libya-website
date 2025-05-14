@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>رؤيا ليبيا للدعاية والخدمات الإعلانية</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       background-color: #f4f4f4;
     }
     header {
-      background-color: #8B0000;
+      background-color: #25D366;
       color: white;
       text-align: center;
       padding: 30px 20px;
     }
     header img {
-      width: 150px;
-      margin-bottom: 15px;
+      height: 80px;
+      margin-bottom: 10px;
     }
     nav {
       background-color: #0033A0;
@@ -26,8 +26,8 @@
     }
     nav a {
       color: white;
-      text-decoration: none;
       margin: 0 15px;
+      text-decoration: none;
       font-weight: bold;
     }
     nav a:hover {
@@ -36,48 +36,66 @@
     section {
       background: white;
       margin: 30px auto;
-      padding: 20px;
+      padding: 25px;
       width: 90%;
-      max-width: 900px;
+      max-width: 1000px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     h2 {
-      color: #8B0000;
+      color: #25D366;
+    }
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .service-card {
+      background: #f9f9f9;
+      border: 2px solid #25D366;
+      border-radius: 10px;
+      padding: 20px;
+      width: 260px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .service-card h3 {
+      color: #25D366;
+      margin-top: 0;
+    }
+    .social a {
+      color: #0033A0;
+      margin: 0 10px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .social a:hover {
+      text-decoration: underline;
     }
     ul {
       list-style: none;
       padding: 0;
     }
     ul li::before {
-      content: "▪ ";
-      color: #0033A0;
+      content: "✔ ";
+      color: #25D366;
       font-weight: bold;
     }
     footer {
-      background-color: #8B0000;
+      background-color: #25D366;
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
-    }
-    .social a {
-      color: #0033A0;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-    }
-    .social a:hover {
-      text-decoration: underline;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="images/f7c56e8c-48bf-43bc-84a7-f7eff9986fd9.jpg" alt="شعار رؤيا ليبيا" />
+    <img src="images/55555555555555.png" alt="شعار الشركة">
     <h1>رؤيا ليبيا للدعاية والخدمات الإعلانية</h1>
-    <p>تأسست عام 1999 - خبرة أكثر من 25 عامًا</p>
+    <p>تأسست عام 1999 - حلول مبتكرة في الإعلان والطباعة والهوية البصرية</p>
   </header>
 
   <nav>
@@ -90,36 +108,55 @@
 
   <section id="about">
     <h2>من نحن</h2>
-    <p>شركة رؤيا ليبيا تقدم خدمات الإعلان والدعاية منذ عام 1999. نتميز بالإبداع والاحترافية في تصميم الشعارات والهويات البصرية، وإعلانات الطرق، وإدارة الحملات الإعلانية.</p>
+    <img src="images/55555555555555.png" alt="شعار رؤيا" style="height: 60px;">
+    <p>شركة رؤيا ليبيا متخصصة في تصميم الشعارات، الطباعة الرقمية، الإعلانات الميدانية، إدارة السوشيال ميديا، والتسويق الرقمي. نملك خبرة تفوق 20 سنة، ومقرنا في طريق السكة - طرابلس بالقرب من DHL.</p>
   </section>
 
   <section id="services">
     <h2>خدماتنا</h2>
-    <ul>
-      <li>تصميم الهويات البصرية</li>
-      <li>طباعة إعلانية وبنرات</li>
-      <li>إعلانات طرق وشاشات LED</li>
-      <li>إدارة سوشيال ميديا</li>
-      <li>تصميم مواقع إلكترونية</li>
-      <li>تصوير احترافي</li>
-    </ul>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>تصميم شعارات وهوية</h3>
+        <p>تصميم احترافي للشعار والهوية البصرية للشركات والمؤسسات.</p>
+      </div>
+      <div class="service-card">
+        <h3>طباعة بنرات وفلكس</h3>
+        <p>خدمة طباعة عالية الجودة للبنرات والملصقات والدعاية الخارجية.</p>
+      </div>
+      <div class="service-card">
+        <h3>إعلانات خارجية</h3>
+        <p>تنفيذ وتركيب لوحات الطرق وشاشات العرض LED.</p>
+      </div>
+      <div class="service-card">
+        <h3>إدارة سوشيال ميديا</h3>
+        <p>خطة إدارة كاملة لحسابات التواصل الاجتماعي وتصميم المحتوى.</p>
+      </div>
+      <div class="service-card">
+        <h3>تصوير فوتوغرافي</h3>
+        <p>تصوير احترافي للمنتجات والمناسبات والإعلانات.</p>
+      </div>
+      <div class="service-card">
+        <h3>تصميم مواقع</h3>
+        <p>برمجة مواقع إلكترونية تفاعلية ومتجاوبة لجميع الأجهزة.</p>
+      </div>
+    </div>
   </section>
 
   <section id="portfolio">
     <h2>أعمالنا</h2>
-    <p>نُفذت مشاريع لمراكز طبية، مطاعم، شركات نقل، ومتاجر إلكترونية.</p>
+    <p>أنجزنا مشاريع مميزة لعدة قطاعات، منها الحكومية والخاصة، تشمل تصميم شعارات، حملات إعلانية، لوحات ميدانية، ومواقع إلكترونية.</p>
+    <img src="images/55555555555555.png" alt="شعار في الأعمال" style="height: 50px;">
   </section>
 
   <section id="clients">
     <h2>عملاؤنا</h2>
     <ul>
-      <li>وزارة التعليم</li>
-      <li>شركة DHL ليبيا</li>
-      <li>مطاعم الشط</li>
-      <li>شركة الشروق للتقنية</li>
       <li>شركة هونشي الصينية</li>
-      <li>ليبيانا للاتصالات</li>
-      <li>المدار الجديد</li>
+      <li>شركة ليبيانا للاتصالات</li>
+      <li>شركة المدار الجديد</li>
+      <li>مطاعم الشط</li>
+      <li>وزارة التعليم</li>
+      <li>DHL ليبيا</li>
     </ul>
   </section>
 
@@ -135,6 +172,7 @@
   </section>
 
   <footer>
+    <img src="images/55555555555555.png" alt="شعار أسفل الموقع" style="height: 50px;"><br>
     &copy; 2025 رؤيا ليبيا - جميع الحقوق محفوظة.
   </footer>
 
