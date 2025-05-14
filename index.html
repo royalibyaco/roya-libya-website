@@ -1,14 +1,4 @@
-import os
-import zipfile
-
-# إنشاء هيكل المجلدات
-project_name = "roya-libya-website"
-base_path = f"/mnt/data/{project_name}"
-images_path = os.path.join(base_path, "images")
-os.makedirs(images_path, exist_ok=True)
-
-# محتوى index.html
-index_html_content = '''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -134,30 +124,3 @@ index_html_content = '''<!DOCTYPE html>
 
 </body>
 </html>
-'''
-
-# كتابة الملف index.html
-index_path = os.path.join(base_path, "index.html")
-with open(index_path, "w", encoding="utf-8") as f:
-    f.write(index_html_content)
-
-# إنشاء ملف README.md
-readme_content = "# رؤيا ليبيا للدعاية والخدمات الإعلانية\n\n" \
-                 "موقع تعريفي رسمي لشركة رؤيا ليبيا التي تأسست عام 1999.\n\n" \
-                 "## المحتوى\n- صفحة من نحن\n- صفحة الخدمات\n- معلومات الاتصال وروابط التواصل الاجتماعي\n\n" \
-                 "## طريقة الاستخدام\n- ضع شعار الشركة داخل مجلد `images` باسم `f7c56e8c-48bf-43bc-84a7-f7eff9986fd9.jpg`\n" \
-                 "- افتح `index.html` في المتصفح لعرض الموقع."
-
-readme_path = os.path.join(base_path, "README.md")
-with open(readme_path, "w", encoding="utf-8") as f:
-    f.write(readme_content)
-
-# ضغط المشروع في ملف zip
-zip_path = f"/mnt/data/{project_name}.zip"
-with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
-    for root, _, files in os.walk(base_path):
-        for file in files:
-            file_path = os.path.join(root, file)
-            zipf.write(file_path, os.path.relpath(file_path, base_path))
-
-zip_path
