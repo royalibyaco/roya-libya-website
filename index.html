@@ -2,33 +2,46 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>رؤيا ليبيا للدعاية والخدمات الإعلانية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رؤيا ليبيا للدعاية والإعلان</title>
   <style>
     * {
-      box-sizing: border-box;
-    }
-    body, html {
       margin: 0;
       padding: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
       scroll-behavior: smooth;
     }
 
-    /* Splash Screen */
+    /* شاشة البداية (الفيديو) */
     #splash {
       position: fixed;
-      width: 100%;
-      height: 100%;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
       background-color: black;
       display: flex;
       justify-content: center;
       align-items: center;
       z-index: 9999;
     }
+
     #splash video {
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* محتوى الموقع */
+    #main-content {
+      display: none;
+      background-color: #f4f4f4;
+      padding: 20px;
     }
 
     header {
@@ -37,22 +50,25 @@
       text-align: center;
       padding: 30px;
     }
+
     header img {
       height: 80px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     nav {
-      background-color: #2d3436;
+      background-color: #0033A0;
       text-align: center;
       padding: 15px;
     }
+
     nav a {
       color: white;
       margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
@@ -67,65 +83,15 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    h2 {
-      color: #00b894;
-    }
-
-    .service {
-      margin-bottom: 20px;
-      border: 2px solid #00cec9;
-      border-radius: 10px;
-      padding: 15px;
-    }
-
-    .characters {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .characters div {
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .characters img {
-      height: 150px;
-      border-radius: 10px;
-      border: 2px solid #2d3436;
-    }
-    .characters div:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .brands {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 30px;
-      text-align: center;
-    }
-    .brands img {
-      height: 100px;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    .whatsapp-btn {
-      display: block;
-      width: fit-content;
-      margin: 30px auto;
-      background-color: #25D366;
-      color: white;
-      padding: 15px 25px;
-      border-radius: 50px;
-      text-decoration: none;
+    .social a {
+      color: #0033A0;
+      margin: 0 15px;
       font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: background-color 0.3s;
+      text-decoration: none;
     }
-    .whatsapp-btn:hover {
-      background-color: #1ebe5d;
+
+    .social a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -135,131 +101,105 @@
       padding: 20px;
       margin-top: 50px;
     }
-    footer img {
-      height: 50px;
-    }
   </style>
 </head>
 <body>
 
-<!-- Splash / Intro Screen -->
+<!-- شاشة الفيديو (intro) -->
 <div id="splash">
-  <video id="introVideo" autoplay muted>
+  <video id="introVideo" autoplay muted playsinline>
     <source src="intro.mp4" type="video/mp4">
     متصفحك لا يدعم تشغيل الفيديو.
   </video>
 </div>
 
+<!-- محتوى الموقع -->
+<div id="main-content">
+  <header>
+    <img src="55555555555555.png" alt="شعار الشركة">
+    <h1>رؤيا ليبيا للدعاية والخدمات الإعلانية</h1>
+    <p>تأسست عام 1999</p>
+  </header>
+
+  <nav>
+    <a href="#about">من نحن</a>
+    <a href="#services">الخدمات</a>
+    <a href="#characters">شخصياتنا</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+
+  <section id="about">
+    <h2>من نحن</h2>
+    <p>شركة رؤيا ليبيا متخصصة في تصميم الشعارات، الطباعة، الإعلانات، والتسويق الرقمي. مقرنا في طريق السكة - طرابلس، بجانب DHL.</p>
+  </section>
+
+  <section id="services">
+    <h2>خدماتنا</h2>
+    <div class="service">
+      <h3>تصميم شعارات</h3>
+      <p>نقدم خدمات تصميم احترافي لهوية شركتك.</p>
+    </div>
+    <div class="service">
+      <h3>طباعة داخلية وإعلانات خارجية</h3>
+      <p>نحن نقدم خدمات طباعة لافتات، بنرات، ستاندات رول أب و X، بالإضافة إلى إعلانات خارجية لمنتجاتك.</p>
+    </div>
+    <div class="service">
+      <h3>إدارة المحتوى والسوشيال ميديا</h3>
+      <p>إعداد وتخطيط منشوراتك على جميع المنصات الرقمية، لزيادة تفاعل جمهورك.</p>
+    </div>
+  </section>
+
+  <section id="characters">
+    <h2>شخصياتنا</h2>
+    <div class="characters">
+      <div>
+        <img src="Roya.jpg" alt="Roya">
+        <p>Roya - الشخصية الأساسية، يقدم الابتكار والخيال في جميع أعمالنا.</p>
+      </div>
+      <div>
+        <img src="Ruyana.jpg" alt="Ruyana">
+        <p>Ruyana - الشخصية المساعدة، تدير العمليات وتنسق المشاريع بكفاءة عالية.</p>
+      </div>
+      <div>
+        <img src="Ruyto.jpg" alt="Ruyto">
+        <p>Ruyto - الشخصية المساعدة، يهتم بالتفاصيل ويساهم في تحسين الجودة.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>تواصل معنا</h2>
+    <p>الهاتف والواتساب: <strong>0914645601</strong></p>
+    <p>البريد الإلكتروني: <a href="mailto:info@royagraphics.ly">info@royagraphics.ly</a></p>
+    <div class="social">
+      <a href="https://www.instagram.com/roya_graphics?igsh=YWRoMDhmZG8zcnAw" target="_blank">إنستغرام</a>
+      <a href="https://www.facebook.com/share/17zC4EsC7Q/?mibextid=wwXIfr" target="_blank">فيسبوك</a>
+      <a href="https://www.royagraphics.ly/" target="_blank">الموقع الرسمي</a>
+    </div>
+  </section>
+
+  <footer>
+    <img src="55555555555555.png" alt="شعار أسفل الموقع" style="height: 50px;">
+    <br>&copy; 2025 رؤيا ليبيا - جميع الحقوق محفوظة.
+  </footer>
+</div>
+
 <script>
-  const introVideo = document.getElementById('introVideo');
+  const video = document.getElementById('introVideo');
   const splash = document.getElementById('splash');
+  const mainContent = document.getElementById('main-content');
 
-  introVideo.addEventListener('ended', function () {
+  video.addEventListener('ended', () => {
     splash.style.display = 'none';
+    mainContent.style.display = 'block';
   });
+
+  // في حال لم يعمل الفيديو بشكل صحيح
+  setTimeout(() => {
+    splash.style.display = 'none';
+    mainContent.style.display = 'block';
+  }, 15000); // 15 ثانية كحد أقصى في حال تعطّل الفيديو
 </script>
-
-<header>
-  <img src="55555555555555.png" alt="شعار الشركة">
-  <h1>رؤيا ليبيا للدعاية والخدمات الإعلانية</h1>
-  <p>تأسست عام 1999</p>
-</header>
-
-<nav>
-  <a href="#about">من نحن</a>
-  <a href="#services">الخدمات</a>
-  <a href="#characters">شخصياتنا</a>
-  <a href="#brands">شركاؤنا</a>
-  <a href="#contact">تواصل معنا</a>
-</nav>
-
-<section id="about">
-  <h2>من نحن</h2>
-  <p style="font-weight: bold;">شركة رؤيا ليبيا متخصصة في تصميم الشعارات، الطباعة، الإعلانات، والتسويق الرقمي. مقرنا في طريق السكة - طرابلس، بجانب DHL.</p>
-  <p>نحن نعمل على تقديم حلول دعائية متكاملة للأفراد والشركات بمهنية عالية.</p>
-  <p>نمتلك أحدث تقنيات الطباعة والتصميم، ونعمل مع كادر إبداعي متمرس.</p>
-  <p>نسعى دائماً للابتكار وخلق تصاميم تواكب السوق الليبي والعالمي.</p>
-  <p>ثقة عملائنا هي مصدر قوتنا واستمراريتنا منذ أكثر من 20 عامًا.</p>
-</section>
-
-<section id="services">
-  <h2>خدماتنا</h2>
-  <div class="service">
-    <h3>تصميم شعارات</h3>
-    <p>نصمم هويات بصرية متكاملة تميز علامتك التجارية.</p>
-  </div>
-  <div class="service">
-    <h3>الطباعة الداخلية والإعلانات الخارجية</h3>
-    <p>نقدم خدمات طباعة عالية الجودة تشمل البنرات، الفلكسات، لوحات LED، ستاندات رول أب، وستاندات X.</p>
-  </div>
-  <div class="service">
-    <h3>إدارة المحتوى والسوشيال ميديا</h3>
-    <p>نخطط ونصمم منشورات احترافية ونطور وجودك الرقمي.</p>
-  </div>
-  <div class="service">
-    <h3>تصميم واجهات المحلات والمركبات</h3>
-    <p>نوفر تصاميم لافتات مضيئة وغير مضيئة، وديكورات لواجهات المحلات، وتغليف مركبات إعلاني.</p>
-  </div>
-</section>
-
-<section id="characters">
-  <h2>شخصياتنا</h2>
-  <div class="characters">
-    <div>
-      <img src="Roya.jpg" alt="Roya">
-      <p><strong>Roya</strong> - القائد الإبداعي، يخطط ويوجه فريق التصميم والرسوم.</p>
-    </div>
-    <div>
-      <img src="Ruyana.jpg" alt="Ruyana">
-      <p><strong>Ruyana</strong> - خبيرة الألوان واللمسات النهائية، تضيف الحيوية لكل مشروع.</p>
-    </div>
-    <div>
-      <img src="Ruyto.jpg" alt="Ruyto">
-      <p><strong>Ruyto</strong> - التقني الذكي، يتعامل مع الطباعة والبرمجة والوسائط الرقمية.</p>
-    </div>
-  </div>
-</section>
-
-<section id="brands">
-  <h2>الشركات التي نمثلها</h2>
-  <div class="brands">
-    <div>
-      <a href="https://cosign.be/" target="_blank">
-        <img src="cosin.jpg" alt="Cosign">
-      </a>
-      <p>Cosign - شركة بلجيكية للعلامات الإرشادية والتوجيه الداخلي والخارجي.</p>
-    </div>
-    <div>
-      <a href="https://www.rolanddga.com/" target="_blank">
-        <img src="roland.jpg" alt="Roland">
-      </a>
-      <p>Roland - شركة يابانية لتصنيع آلات الطباعة بتقنية Print & Cut.</p>
-    </div>
-    <div>
-      <a href="https://www.mactac.com/" target="_blank">
-        <img src="mactac.jpg" alt="Mactac">
-      </a>
-      <p>Mactac - شركة أمريكية رائدة في إنتاج مواد الطباعة الخام.</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>تواصل معنا</h2>
-  <p>الهاتف والواتساب: <strong>0914645601</strong></p>
-  <p>البريد الإلكتروني: <a href="mailto:info@royagraphics.ly">info@royagraphics.ly</a></p>
-  <div class="social">
-    <a href="https://www.instagram.com/roya_graphics?igsh=YWRoMDhmZG8zcnAw" target="_blank">إنستغرام</a> |
-    <a href="https://www.facebook.com/share/17zC4EsC7Q/?mibextid=wwXIfr" target="_blank">فيسبوك</a> |
-    <a href="https://www.royagraphics.ly/" target="_blank">الموقع الرسمي</a>
-  </div>
-  <a class="whatsapp-btn" href="https://wa.me/218914645601" target="_blank">راسلنا عبر واتساب</a>
-</section>
-
-<footer>
-  <img src="55555555555555.png" alt="شعار أسفل الموقع"><br>
-  &copy; 2025 رؤيا ليبيا - جميع الحقوق محفوظة.
-</footer>
 
 </body>
 </html>
