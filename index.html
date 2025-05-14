@@ -13,7 +13,7 @@
       background-color: #25D366;
       color: white;
       text-align: center;
-      padding: 30px 20px;
+      padding: 30px;
     }
     header img {
       height: 80px;
@@ -26,7 +26,7 @@
     }
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
     }
@@ -45,41 +45,26 @@
     h2 {
       color: #25D366;
     }
-    .services-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
+    .characters img {
+      height: 150px;
+      border-radius: 10px;
+      margin: 10px;
+      border: 2px solid #0033A0;
     }
-    .service-card {
-      background: #f9f9f9;
+    .service {
+      margin-bottom: 20px;
       border: 2px solid #25D366;
       border-radius: 10px;
-      padding: 20px;
-      width: 260px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    .service-card h3 {
-      color: #25D366;
-      margin-top: 0;
+      padding: 15px;
     }
     .social a {
       color: #0033A0;
-      margin: 0 10px;
+      margin: 0 15px;
       font-weight: bold;
       text-decoration: none;
     }
     .social a:hover {
       text-decoration: underline;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li::before {
-      content: "✔ ";
-      color: #25D366;
-      font-weight: bold;
     }
     footer {
       background-color: #25D366;
@@ -95,69 +80,53 @@
   <header>
     <img src="55555555555555.png" alt="شعار الشركة">
     <h1>رؤيا ليبيا للدعاية والخدمات الإعلانية</h1>
-    <p>تأسست عام 1999 - حلول مبتكرة في الإعلان والطباعة والهوية البصرية</p>
+    <p>تأسست عام 1999</p>
   </header>
 
   <nav>
     <a href="#about">من نحن</a>
     <a href="#services">الخدمات</a>
-    <a href="#portfolio">أعمالنا</a>
-    <a href="#clients">عملاؤنا</a>
+    <a href="#characters">شخصياتنا</a>
     <a href="#contact">تواصل معنا</a>
   </nav>
 
   <section id="about">
     <h2>من نحن</h2>
-    <img src="55555555555555.png" alt="شعار رؤيا" style="height: 60px;">
-    <p>شركة رؤيا ليبيا متخصصة في تصميم الشعارات، الطباعة الرقمية، الإعلانات الميدانية، إدارة السوشيال ميديا، والتسويق الرقمي. نملك خبرة تفوق 20 سنة، ومقرنا في طريق السكة - طرابلس بالقرب من DHL.</p>
+    <p>شركة رؤيا ليبيا متخصصة في تصميم الشعارات، الطباعة، الإعلانات، والتسويق الرقمي. مقرنا في طريق السكة - طرابلس، بجانب DHL.</p>
   </section>
 
   <section id="services">
     <h2>خدماتنا</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>تصميم شعارات وهوية</h3>
-        <p>تصميم احترافي للشعار والهوية البصرية للشركات والمؤسسات.</p>
-      </div>
-      <div class="service-card">
-        <h3>طباعة بنرات وفلكس</h3>
-        <p>خدمة طباعة عالية الجودة للبنرات والملصقات والدعاية الخارجية.</p>
-      </div>
-      <div class="service-card">
-        <h3>إعلانات خارجية</h3>
-        <p>تنفيذ وتركيب لوحات الطرق وشاشات العرض LED.</p>
-      </div>
-      <div class="service-card">
-        <h3>إدارة سوشيال ميديا</h3>
-        <p>خطة إدارة كاملة لحسابات التواصل الاجتماعي وتصميم المحتوى.</p>
-      </div>
-      <div class="service-card">
-        <h3>تصوير فوتوغرافي</h3>
-        <p>تصوير احترافي للمنتجات والمناسبات والإعلانات.</p>
-      </div>
-      <div class="service-card">
-        <h3>تصميم مواقع</h3>
-        <p>برمجة مواقع إلكترونية تفاعلية ومتجاوبة لجميع الأجهزة.</p>
-      </div>
+    <div class="service">
+      <h3>تصميم شعارات</h3>
+      <p>نقدم خدمات تصميم احترافي لهوية شركتك.</p>
+    </div>
+    <div class="service">
+      <h3>طباعة وإعلانات</h3>
+      <p>بنرات، فلكسات، لوحات LED بجودة عالية.</p>
+    </div>
+    <div class="service">
+      <h3>إدارة المحتوى والسوشيال ميديا</h3>
+      <p>إعداد وتخطيط منشوراتك على جميع المنصات.</p>
     </div>
   </section>
 
-  <section id="portfolio">
-    <h2>أعمالنا</h2>
-    <p>أنجزنا مشاريع مميزة لعدة قطاعات، منها الحكومية والخاصة، تشمل تصميم شعارات، حملات إعلانية، لوحات ميدانية، ومواقع إلكترونية.</p>
-    <img src="55555555555555.png" alt="شعار في الأعمال" style="height: 50px;">
-  </section>
-
-  <section id="clients">
-    <h2>عملاؤنا</h2>
-    <ul>
-      <li>شركة هونشي الصينية</li>
-      <li>شركة ليبيانا للاتصالات</li>
-      <li>شركة المدار الجديد</li>
-      <li>مطاعم الشط</li>
-      <li>وزارة التعليم</li>
-      <li>DHL ليبيا</li>
-    </ul>
+  <section id="characters">
+    <h2>شخصياتنا</h2>
+    <div class="characters" style="text-align:center;">
+      <div>
+        <img src="Roya.jpg" alt="Roya">
+        <p>Roya - الشخصية الأساسية</p>
+      </div>
+      <div>
+        <img src="Ruyana.jpg" alt="Ruyana">
+        <p>Ruyana - شخصية مساعدة</p>
+      </div>
+      <div>
+        <img src="Ruyto.jpg" alt="Ruyto">
+        <p>Ruyto - شخصية مساعدة</p>
+      </div>
+    </div>
   </section>
 
   <section id="contact">
