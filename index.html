@@ -2,115 +2,160 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>رؤيا ليبيا للدعاية والخدمات الإعلانية</title>
+  <title>رؤيا ليبيا للدعاية والإعلان</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Arial', sans-serif; background-color: #f0f2f5; color: #333; line-height: 1.6; }
-    header, nav, section, footer { max-width: 1100px; margin: auto; padding: 20px; }
-
-    header {
-      background: linear-gradient(to left, #00c6ff, #0072ff);
-      color: white;
-      text-align: center;
-      border-radius: 0 0 20px 20px;
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
     }
-    header img { height: 90px; margin-bottom: 10px; }
-
+    header, nav, section, footer {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+    header img {
+      height: 80px;
+      display: block;
+      margin: auto;
+    }
     nav {
       text-align: center;
-      margin-top: 15px;
+      margin-bottom: 20px;
     }
     nav a {
-      display: inline-block;
-      margin: 0 10px;
-      padding: 10px 15px;
-      background-color: #0072ff;
+      background-color: #0077b6;
       color: white;
+      padding: 10px 15px;
       text-decoration: none;
-      border-radius: 8px;
-      transition: 0.3s;
+      margin: 5px;
+      border-radius: 6px;
+      display: inline-block;
     }
     nav a:hover {
-      background-color: #0055cc;
+      background-color: #023e8a;
     }
 
     h2 {
-      margin-top: 40px;
-      color: #0072ff;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
+      font-size: 26px;
+      color: #03045e;
+      margin-top: 30px;
+    }
+
+    #about p {
+      font-weight: bold;
+      color: #222;
+      font-size: 18px;
+      margin: 10px 0;
     }
 
     .service-box {
-      background-color: white;
-      border: 2px solid #0072ff;
-      border-radius: 12px;
+      background: white;
+      border: 2px solid #0077b6;
+      border-radius: 15px;
       padding: 20px;
       margin: 20px 0;
+      transition: transform 0.3s ease;
     }
+    .service-box:hover {
+      transform: scale(1.02);
+    }
+
+    .service-box h3 {
+      font-size: 22px;
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+
     .service-box img {
       width: 100%;
       max-width: 400px;
-      margin: 10px;
       border-radius: 10px;
-      border: 2px solid #0072ff;
+      margin: 10px auto;
+      transition: transform 0.3s ease;
+    }
+    .service-box img:hover {
+      transform: scale(1.05);
     }
 
-    .partners {
-      text-align: center;
-    }
     .partners img {
       height: 80px;
       margin: 10px;
       border-radius: 10px;
       border: 2px solid #ccc;
+      transition: transform 0.3s ease;
+    }
+
+    .partners img:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      background-color: #0077b6;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .social-links a {
+      color: #0077b6;
+      margin: 0 10px;
+      font-weight: bold;
+      text-decoration: none;
     }
 
     .whatsapp {
       display: inline-block;
-      background-color: #25D366;
-      color: white;
+      margin: 15px auto;
       padding: 10px 20px;
-      margin-top: 20px;
-      border-radius: 10px;
-      text-decoration: none;
+      background: #25D366;
+      color: white;
+      border-radius: 8px;
       font-weight: bold;
+      text-decoration: none;
     }
 
-    footer {
-      background-color: #0072ff;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      border-radius: 20px 20px 0 0;
-      margin-top: 40px;
+    .gallery img {
+      width: 250px;
+      margin: 10px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
     }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      border-color: #0077b6;
+    }
+
   </style>
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="شعار الشركة">
-  <h1>رؤيا ليبيا للدعاية والخدمات الإعلانية</h1>
-  <p>تأسست عام 1999 - طريق السكة بجانب DHL</p>
+  <img src="images/55555555555555.png" alt="شعار رؤيا ليبيا">
+  <h1 style="text-align:center; color:#03045e;">رؤيا ليبيا للدعاية والخدمات الإعلانية</h1>
+  <p style="text-align:center; font-weight:bold;">تأسست عام 1999 – طريق السكة بجانب DHL</p>
 </header>
 
 <nav>
   <a href="#about">من نحن</a>
   <a href="#services">الخدمات</a>
   <a href="#partners">شركات نمثلها</a>
-  <a href="#contact">تواصل</a>
+  <a href="#contact">تواصل معنا</a>
 </nav>
 
 <section id="about">
   <h2>من نحن</h2>
-  <p><strong>شركة رؤيا ليبيا</strong> تعمل في مجال الطباعة والإعلان منذ عام 1999، ونقدم خدمات احترافية تشمل تصميم الشعارات، الهدايا، الطباعة بأنواعها، وتمثيل أفضل العلامات العالمية.</p>
-  <ul>
-    <li>أكثر من 20 سنة خبرة في السوق الليبي.</li>
-    <li>حلول دعائية متكاملة بتصاميم مبتكرة.</li>
-    <li>شراكات مع علامات تجارية عالمية.</li>
-    <li>خدمة عملاء ممتازة وضمان جودة.</li>
-  </ul>
+  <p>
+    نحن شركة "رؤيا ليبيا" الرائدة في مجال الإعلانات والدعاية منذ عام 1999. نقدم خدمات تصميم وطباعة وتنفيذ اللوحات الإعلانية والهدايا الترويجية، بدقة عالية وجودة تناسب تطلعات السوق الليبي.
+  </p>
+  <p>فريقنا يتميز بالإبداع والخبرة في تقديم الحلول الدعائية الشاملة.</p>
+  <p>نفتخر بشراكاتنا مع علامات تجارية عالمية في مجال الطباعة والإعلان.</p>
+  <p>نُقدّم حلولاً مخصصة لكل عميل مع الالتزام بالمواعيد والاحترافية.</p>
 </section>
 
 <section id="services">
@@ -118,62 +163,63 @@
 
   <div class="service-box">
     <h3>تصميم شعارات</h3>
-    <p>نصمم لك شعاراً يعبر عن هويتك التجارية بطريقة إبداعية واحترافية.</p>
-    <img src="logo.png" alt="تصميم شعارات">
+    <p>ابتكار شعارات وهوية بصرية تمثّل علامتك التجارية بأسلوب فني مميز.</p>
+    <img src="images/55555555555555.png" alt="تصميم شعارات">
   </div>
 
   <div class="service-box">
     <h3>الطباعة الداخلية والإعلانات الخارجية (LED)</h3>
-    <p>نقوم بطباعة بنرات ولوحات دعائية بإضاءة LED عالية الجودة، مع ستاندات رول أب و X.</p>
-    <img src="LEDداخلي وخارجي.jpg">
-    <img src="LEDداخلي وخارجي1.jpg">
-    <img src="LEDداخلي وخارجي2.jpg">
-    <img src="LEDداخلي وخارجي3.jpg">
+    <p>تنفيذ بنرات، لوحات إضاءة LED، ستاندات رول أب، وستاندات X.</p>
+    <img src="images/LEDداخلي وخارجي.jpg">
+    <img src="images/LEDداخلي وخارجي1.jpg">
+    <img src="images/LEDداخلي وخارجي2.jpg">
+    <img src="images/LEDداخلي وخارجي3.jpg">
   </div>
 
   <div class="service-box">
     <h3>هدايا دعائية</h3>
-    <p>مجموعة متنوعة من الهدايا الترويجية المخصصة لعلامتك التجارية.</p>
-    <img src="هداية.jpg">
-    <img src="هداية1.jpg">
-    <img src="هداية2.jpg">
-    <img src="هداية3.jpg">
-    <img src="هداية4.jpg">
-    <img src="هداية5.jpg">
-    <img src="هداية6.jpg">
+    <p>هدايا مخصصة مطبوعة بشعارك تعزز من انتشار علامتك التجارية.</p>
+    <div class="gallery">
+      <img src="images/هداية.jpg">
+      <img src="images/هداية1.jpg">
+      <img src="images/هداية2.jpg">
+      <img src="images/هداية3.jpg">
+      <img src="images/هداية4.jpg">
+      <img src="images/هداية5.jpg">
+      <img src="images/هداية6.jpg">
+    </div>
   </div>
 
 </section>
 
 <section id="partners">
   <h2>شركات نمثلها</h2>
-  <div class="partners">
-    <div>
-      <a href="https://cosign.be/" target="_blank">
-        <img src="cosin.jpg" alt="Cosign">
-      </a>
-      <p>شركة بلجيكية رائدة في أنظمة التوجيه والعلامات.</p>
-    </div>
-    <div>
-      <a href="https://www.rolanddga.com/" target="_blank">
-        <img src="roland.jpg" alt="Roland">
-      </a>
-      <p>شركة يابانية متخصصة في الطباعة الرقمية المتقدمة.</p>
-    </div>
-    <div>
-      <a href="https://www.mactac.com/" target="_blank">
-        <img src="mactac.jpg" alt="Mactac">
-      </a>
-      <p>شركة أمريكية لإنتاج مواد الطباعة ذات الجودة العالية.</p>
-    </div>
+  <div class="partners" style="text-align:center;">
+    <a href="https://cosign.be/" target="_blank">
+      <img src="images/cosin.jpg" alt="Cosign">
+    </a>
+    <a href="https://www.rolanddga.com/" target="_blank">
+      <img src="images/roland.jpg" alt="Roland">
+    </a>
+    <a href="https://www.mactac.com/" target="_blank">
+      <img src="images/mactac.jpg" alt="Mactac">
+    </a>
   </div>
 </section>
 
 <section id="contact">
   <h2>تواصل معنا</h2>
-  <p><strong>رقم الهاتف والواتساب:</strong> 0914645601</p>
-  <p><strong>البريد الإلكتروني:</strong> <a href="mailto:info@royagraphics.ly">info@royagraphics.ly</a></p>
-  <a class="whatsapp" href="https://wa.me/218914645601" target="_blank">راسلنا على واتساب</a>
+  <p style="text-align:center;">رقم الهاتف والواتساب: <strong>0914645601</strong></p>
+  <p style="text-align:center;">البريد الإلكتروني: <a href="mailto:info@royagraphics.ly">info@royagraphics.ly</a></p>
+  <p class="social-links" style="text-align:center;">
+    تابعنا على:
+    <a href="https://www.instagram.com/roya_graphics?igsh=YWRoMDhmZG8zcnAw" target="_blank">إنستغرام</a>
+    |
+    <a href="https://www.facebook.com/share/17zC4EsC7Q/?mibextid=wwXIfr" target="_blank">فيسبوك</a>
+  </p>
+  <div style="text-align:center;">
+    <a class="whatsapp" href="https://wa.me/218914645601" target="_blank">راسلنا على واتساب</a>
+  </div>
 </section>
 
 <footer>
