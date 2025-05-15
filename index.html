@@ -5,43 +5,128 @@
   <title>رؤيا ليبيا للدعاية والخدمات الإعلانية</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Arial', sans-serif; background-color: #f8f8f8; color: #333; }
-    header, footer, section, nav { padding: 20px; margin: auto; max-width: 1000px; }
-    header img { height: 80px; }
-    nav a {
-      margin: 0 15px; color: #fff; text-decoration: none;
-      padding: 10px 15px; background-color: #003366; border-radius: 5px;
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
+      color: #222;
+      line-height: 1.7;
     }
-    nav a:hover { background-color: #005599; }
-    h2 { color: #003366; margin-top: 20px; }
+    header, footer, section, nav {
+      padding: 20px;
+      margin: auto;
+      max-width: 1000px;
+    }
+    header img {
+      height: 90px;
+    }
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      background-color: #003366;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: #005599;
+    }
+    h2 {
+      color: #003366;
+      margin: 30px 0 15px;
+      font-size: 28px;
+    }
+    h3 {
+      color: #007bff;
+      margin: 10px 0;
+    }
     .service-box {
-      border: 2px solid #25D366; padding: 20px; border-radius: 15px;
-      background-color: #fff; margin-bottom: 20px;
+      border: 2px solid #25D366;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: #fff;
+      margin-bottom: 25px;
+    }
+    .service-box p {
+      color: #111;
+      font-weight: bold;
     }
     .service-box img {
-      width: 100%; border-radius: 10px; border: 3px solid #25D366;
+      width: 100%;
+      border-radius: 10px;
+      border: 3px solid #25D366;
       margin-top: 10px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .service-box img:hover {
+      transform: scale(1.05);
+    }
+
+    .partners {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
     }
     .partners img {
-      height: 80px; margin: 10px; border: 2px solid #ccc; border-radius: 10px;
+      height: 100px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      transition: transform 0.3s;
+      cursor: pointer;
     }
-    .partners p { font-size: 14px; margin-top: 5px; color: #555; }
-    footer { background-color: #25D366; color: white; text-align: center; border-radius: 10px; }
+    .partners img:hover {
+      transform: scale(1.1);
+    }
+    .partners p {
+      font-size: 15px;
+      margin-top: 8px;
+      color: #444;
+      text-align: center;
+      max-width: 300px;
+    }
+    footer {
+      background-color: #25D366;
+      color: white;
+      text-align: center;
+      border-radius: 10px;
+      padding: 20px;
+    }
     .whatsapp {
-      display: inline-block; margin: 20px auto; text-align: center;
-      padding: 10px 20px; background: #25D366; color: white; border-radius: 8px;
-      text-decoration: none; font-weight: bold;
+      display: inline-block;
+      margin: 20px auto;
+      text-align: center;
+      padding: 10px 20px;
+      background: #25D366;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
     }
     .map-link {
-      display: block; margin: 20px auto; color: #003366; font-weight: bold;
-      text-align: center; text-decoration: none;
+      display: block;
+      margin: 15px auto;
+      color: #003366;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
     }
     #intro-screen {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: black; z-index: 9999;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: black;
+      z-index: 9999;
     }
     #intro-screen video {
-      width: 100%; height: 100%; object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   </style>
 </head>
@@ -61,7 +146,6 @@
   video.onended = () => { intro.style.display = "none"; };
 </script>
 
-<!-- المحتوى الرئيسي -->
 <header>
   <img src="55555555555555.png" alt="شعار الشركة">
   <h1>رؤيا ليبيا للدعاية والخدمات الإعلانية</h1>
@@ -77,14 +161,14 @@
 
 <section id="about">
   <h2>من نحن</h2>
-  <p style="font-weight: bold;">
-    شركة رؤيا ليبيا للدعاية والخدمات الإعلانية، تأسست عام 1999 وتعمل في مجال الإعلانات والطباعات وتصميم الهوية البصرية.
+  <p style="font-weight: bold; color: #222;">
+    شركة رؤيا ليبيا للدعاية والخدمات الإعلانية، تأسست عام 1999 وتعمل في مجال الإعلانات، تصميم الهويات البصرية، وتنفيذ الطباعات بأعلى جودة.
   </p>
-  <ul>
-    <li>نحن نُبدع في تقديم حلول دعائية متكاملة تناسب كل عميل.</li>
-    <li>خبرة واسعة في السوق الليبي لأكثر من 20 سنة.</li>
-    <li>وكالات حصرية لأشهر الشركات العالمية في مجال الطباعة والإعلان.</li>
-    <li>نقدم خدماتنا بجودة عالية وبأسعار منافسة.</li>
+  <ul style="padding-right: 20px; margin-top: 10px;">
+    <li>نُبدع في تقديم حلول دعائية مخصصة.</li>
+    <li>أكثر من 20 سنة من الخبرة في السوق الليبي.</li>
+    <li>وكالات حصرية لشركات عالمية في مجال الطباعة.</li>
+    <li>جودة عالية بأسعار منافسة.</li>
   </ul>
 </section>
 
@@ -120,20 +204,20 @@
 
   <div class="service-box">
     <h3>الطباعة على الملابس</h3>
-    <p>error</p>
+    <p>ننفذ طباعات حرارية وتصاميم مخصصة على التيشيرتات والملابس.</p>
     <img src="55555555555555.png" alt="شعار">
   </div>
 
   <div class="service-box">
     <h3>تصميم الإعلانات الطرقية</h3>
-    <p>error</p>
+    <p>لوحات ضخمة في المواقع الحيوية لتوصيل رسالتك الإعلانية بفعالية.</p>
     <img src="55555555555555.png" alt="شعار">
   </div>
 </section>
 
 <section id="partners">
   <h2>شركات نمثلها</h2>
-  <div class="partners" style="text-align:center;">
+  <div class="partners">
     <div>
       <a href="https://cosign.be/" target="_blank">
         <img src="cosin.jpg" alt="Cosign">
@@ -142,7 +226,7 @@
     </div>
     <div>
       <a href="https://www.rolanddga.com/" target="_blank">
-        <img src="roland.jpg" alt="Roland" style="height:60px;">
+        <img src="roland.jpg" alt="Roland">
       </a>
       <p>Roland شركة يابانية لآلات الطباعة بتقنية Print & Cut</p>
     </div>
