@@ -2,141 +2,107 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>رؤيا ليبيا للدعاية والخدمات الإعلانية</title>
+  <title>رؤيا ليبيا للدعاية والإعلان</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #111;
-      color: #e0e0e0;
-      line-height: 1.7;
+      background-color: #ffffff;
+      color: #222;
     }
-
     header, footer, section, nav {
       padding: 20px;
       margin: auto;
       max-width: 1000px;
     }
-
     header img {
-      height: 100px;
+      height: 80px;
     }
-
-    nav {
-      text-align: center;
-      margin: 20px 0;
-    }
-
     nav a {
       margin: 0 10px;
-      color: #111;
+      color: #fff;
       text-decoration: none;
-      padding: 10px 20px;
-      background-color: #25D366;
+      padding: 10px 15px;
+      background-color: #002366;
       border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.3s;
     }
-
     nav a:hover {
-      background-color: #1eb250;
+      background-color: #0033cc;
     }
-
     h2 {
-      color: #25D366;
-      margin: 30px 0 15px;
+      color: #002366;
+      margin-top: 30px;
       font-size: 28px;
     }
-
-    h3 {
-      color: #66ffb2;
-      margin: 10px 0;
-    }
-
     .service-box {
-      border: 2px solid #25D366;
+      border: 2px solid #002366;
       padding: 20px;
       border-radius: 15px;
-      background-color: #1c1c1c;
+      background-color: #f0f4ff;
       margin-bottom: 25px;
     }
-
+    .service-box h3 {
+      font-size: 22px;
+      color: #002366;
+    }
     .service-box p {
-      color: #ccc;
+      font-size: 18px;
+      color: #333;
       font-weight: bold;
     }
-
     .service-box img {
       width: 100%;
       border-radius: 10px;
-      border: 3px solid #25D366;
+      border: 3px solid #002366;
       margin-top: 10px;
-      transition: transform 0.3s ease;
-      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-
     .service-box img:hover {
       transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
-
     .partners {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 20px;
+      text-align: center;
     }
-
     .partners img {
-      height: 130px;
-      border: 2px solid #ccc;
-      border-radius: 10px;
+      height: 120px;
+      margin: 15px;
+      border-radius: 12px;
       transition: transform 0.3s;
-      cursor: pointer;
-      background-color: #fff;
     }
-
     .partners img:hover {
       transform: scale(1.1);
     }
-
     .partners p {
       font-size: 16px;
-      margin-top: 8px;
-      color: #ccc;
-      text-align: center;
-      max-width: 300px;
+      color: #444;
     }
-
     footer {
-      background-color: #25D366;
-      color: #111;
+      background-color: #002366;
+      color: white;
       text-align: center;
       border-radius: 10px;
-      padding: 20px;
-      font-weight: bold;
+      margin-top: 40px;
     }
-
     .whatsapp {
       display: inline-block;
       margin: 20px auto;
       text-align: center;
       padding: 10px 20px;
       background: #25D366;
-      color: #111;
+      color: white;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
     }
-
     .map-link {
       display: block;
       margin: 15px auto;
-      color: #25D366;
+      color: #002366;
       font-weight: bold;
       text-align: center;
       text-decoration: none;
     }
-
     #intro-screen {
       position: fixed;
       top: 0; left: 0;
@@ -144,11 +110,17 @@
       background: black;
       z-index: 9999;
     }
-
     #intro-screen video {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    #about p {
+      color: #111;
+      background-color: #e8ecff;
+      padding: 15px;
+      border-radius: 10px;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -161,15 +133,15 @@
     متصفحك لا يدعم تشغيل الفيديو.
   </video>
 </div>
-
 <script>
   const intro = document.getElementById("intro-screen");
   const video = document.getElementById("intro-video");
   video.onended = () => { intro.style.display = "none"; };
 </script>
 
+<!-- المحتوى -->
 <header>
-  <img src="55555555555555.png" alt="شعار الشركة">
+  <img src="data:image/png;base64,..." alt="شعار الشركة"> <!-- استبدل base64 لاحقًا -->
   <h1>رؤيا ليبيا للدعاية والخدمات الإعلانية</h1>
   <p><strong>تأسست عام 1999، طريق السكة بجانب DHL</strong></p>
 </header>
@@ -183,15 +155,10 @@
 
 <section id="about">
   <h2>من نحن</h2>
-  <p style="font-weight: bold; color: #ccc;">
-    شركة رؤيا ليبيا للدعاية والخدمات الإعلانية، تأسست عام 1999 وتعمل في مجال الإعلانات، تصميم الهويات البصرية، وتنفيذ الطباعات بأعلى جودة.
+  <p>
+    نحن شركة متخصصة في تقديم حلول دعاية وإعلان متكاملة، تشمل التصميم، الطباعة، التركيب، والتوزيع.
+    بخبرة تتجاوز 20 عامًا، نعمل بشغف لخلق هوية بصرية مميزة لكل عميل، ونسعى للتميز من خلال الجودة والابتكار.
   </p>
-  <ul style="padding-right: 20px; margin-top: 10px;">
-    <li>نُبدع في تقديم حلول دعائية مخصصة.</li>
-    <li>أكثر من 20 سنة من الخبرة في السوق الليبي.</li>
-    <li>وكالات حصرية لشركات عالمية في مجال الطباعة.</li>
-    <li>جودة عالية بأسعار منافسة.</li>
-  </ul>
 </section>
 
 <section id="services">
@@ -199,42 +166,28 @@
 
   <div class="service-box">
     <h3>تصميم شعارات</h3>
-    <p>تصميم احترافي لهوية شركتك أو مؤسستك مع مراعاة الأبعاد الفنية.</p>
-    <img src="55555555555555.png" alt="شعار">
+    <p>تصميم احترافي لهوية شركتك أو مؤسستك مع مراعاة الأبعاد الفنية والجمالية.</p>
+    <img src="data:image/jpeg;base64,..."> <!-- شعار -->
   </div>
 
   <div class="service-box">
     <h3>الطباعة الداخلية والإعلانات الخارجية (LED)</h3>
-    <p>ننفذ لوحات دعائية بإضاءة LED، مع بنرات وستاندات رول أب وستاندات X.</p>
-    <img src="LEDداخلي وخارجي.jpg">
-    <img src="LEDداخلي وخارجي1.jpg">
-    <img src="LEDداخلي وخارجي2.jpg">
-    <img src="LEDداخلي وخارجي3.jpg">
+    <p>ننفذ لوحات دعائية بإضاءة LED مع تصاميم جذابة واحترافية.</p>
+    <img src="data:image/jpeg;base64,...">
+    <img src="data:image/jpeg;base64,...">
+    <img src="data:image/jpeg;base64,...">
+    <img src="data:image/jpeg;base64,...">
   </div>
 
   <div class="service-box">
     <h3>هدايا دعائية</h3>
-    <p>نقدم مجموعة متنوعة من الهدايا الترويجية المخصصة لعلامتك التجارية.</p>
-    <img src="هداية.jpg">
-    <img src="هداية1.jpg">
-    <img src="هداية2.jpg">
-    <img src="هداية3.jpg">
-    <img src="هداية4.jpg">
-    <img src="هداية5.jpg">
-    <img src="هداية6.jpg">
+    <p>مجموعة فاخرة من الهدايا الترويجية مثل الأقلام، الأكواب، الدفاتر، وغيرها.</p>
+    <img src="data:image/jpeg;base64,...">
+    <img src="data:image/jpeg;base64,...">
+    <img src="data:image/jpeg;base64,...">
+    <img src="data:image/jpeg;base64,...">
   </div>
 
-  <div class="service-box">
-    <h3>الطباعة على الملابس</h3>
-    <p>ننفذ طباعات حرارية وتصاميم مخصصة على التيشيرتات والملابس.</p>
-    <img src="55555555555555.png" alt="شعار">
-  </div>
-
-  <div class="service-box">
-    <h3>تصميم الإعلانات الطرقية</h3>
-    <p>لوحات ضخمة في المواقع الحيوية لتوصيل رسالتك الإعلانية بفعالية.</p>
-    <img src="55555555555555.png" alt="شعار">
-  </div>
 </section>
 
 <section id="partners">
@@ -242,21 +195,21 @@
   <div class="partners">
     <div>
       <a href="https://cosign.be/" target="_blank">
-        <img src="cosin.jpg" alt="Cosign">
+        <img src="data:image/jpeg;base64,..." alt="Cosign">
       </a>
-      <p>Cosign شركة بلجيكية للعلامات الإرشادية والتوجيه الداخلي والخارجي</p>
+      <p>شركة بلجيكية رائدة في أنظمة الإرشاد الداخلي والخارجي</p>
     </div>
     <div>
       <a href="https://www.rolanddga.com/" target="_blank">
-        <img src="roland.jpg" alt="Roland">
+        <img src="data:image/jpeg;base64,..." alt="Roland">
       </a>
-      <p>Roland شركة يابانية لآلات الطباعة بتقنية Print & Cut</p>
+      <p>شركة يابانية متخصصة في آلات الطباعة الاحترافية</p>
     </div>
     <div>
       <a href="https://www.mactac.com/" target="_blank">
-        <img src="mactac.jpg" alt="Mactac">
+        <img src="data:image/jpeg;base64,..." alt="Mactac">
       </a>
-      <p>Mactac شركة أمريكية لتصنيع مواد الطباعة الخام</p>
+      <p>شركة أمريكية لإنتاج مواد الطباعة اللاصقة والفينيل</p>
     </div>
   </div>
 </section>
@@ -264,9 +217,9 @@
 <section id="contact">
   <h2>تواصل معنا</h2>
   <p>رقم الهاتف والواتساب: <strong>0914645601</strong></p>
-  <p>البريد الإلكتروني: <a href="mailto:info@royagraphics.ly" style="color:#66ffb2;">info@royagraphics.ly</a></p>
+  <p>البريد الإلكتروني: <a href="mailto:info@royagraphics.ly">info@royagraphics.ly</a></p>
   <a class="whatsapp" href="https://wa.me/218914645601" target="_blank">راسلنا على واتساب</a>
-  <a class="map-link" href="https://maps.app.goo.gl/bpu8QkV7MgdNof9p9?g_st=com.google.maps.preview.copy" target="_blank">موقعنا على الخريطة</a>
+  <a class="map-link" href="https://maps.app.goo.gl/bpu8QkV7MgdNof9p9" target="_blank">موقعنا على الخريطة</a>
 </section>
 
 <footer>
